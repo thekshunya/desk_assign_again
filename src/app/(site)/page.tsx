@@ -14,15 +14,18 @@ import clsx from 'clsx';
 import CustomCard from '@/components/landing-page/custom-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CardContent, CardDescription, CardTitle } from '@/components/ui/card';
-
+// import HeroImage from '@/components/ui/hero-image';
+import { Container } from '@/components/container';
+import { HomepageHero } from '@/components/homepagehero';
+import NavigationMenuu from '@/components/ui/navbar';
 const HomePage = () => {
   return (
     <>
       <section
-        className=" overflow-hidden
+        className=" overflow-hidden 
       px-4
       sm:px-6
-      mt-10
+      mt-40
       sm:flex
       sm:flex-col
       gap-4
@@ -31,8 +34,9 @@ const HomePage = () => {
       >
         <TitleSection
           subheading=""
-          pill="✨ Your Workspace, Perfected"
-          title="Deskera AI: Revolutionizing Business Intelligence"
+          pill="✨ ERP reinvented."
+          title="
+          Ditch spreadsheets, unleash AI: Run your business smarter, faster, anywhere."
         />
         <div
           className="bg-white
@@ -42,24 +46,23 @@ const HomePage = () => {
           bg-gradient-to-r
           from-primary
           to-brand-primaryBlue
-          sm:w-[300px]
-        "
+          sm:w-[200px]"
         >
           <Button
             variant={'secondary'}
             className=" w-full
             rounded-[10px]
             p-6
-            text-2xl
-            bg-background
-          "
+            text-lg
+            bg-background"
           >
             Get Deskera AI Free
           </Button>
         </div>
         <div
           className="md:mt-[90px]
-          sm:w-3/4
+          sm:w-full
+          
           w-[750px]
           flex
           justify-center
@@ -68,25 +71,17 @@ const HomePage = () => {
           mb-[20px] lg:mb-[100px]
           relative
           sm:ml-0
-          ml-[50px]
-        "
+          ml-[50px]"
         >
-          <Image src={Banner} alt="Application Banner" />
-          <div
-            className="bottom-0
-            top-[50%]
-            bg-gradient-to-t
-            dark:from-background
-            left-0
-            right-0
-            absolute
-            z-10
-            
-          "
-          ></div>
+          {/* <Image src={Banner} alt="Application Banner" /> */}
         </div>
       </section>
-      <TitleSection title="Users❤️Deskera" />
+      <div className=" ">
+        <Container className="">
+          <HomepageHero />
+        </Container>
+      </div>
+      {/* <TitleSection title="" /> */}
       <section className="relative">
         <div
           className="overflow-hidden
@@ -113,32 +108,29 @@ const HomePage = () => {
           before:bottom-0
           before:w-20
           before:z-10
-          before:absolute
-        "
+          before:absolute"
         >
           {[...Array(2)].map((arr) => (
             <div
               key={arr}
               className="flex
                 flex-nowrap
-                animate-slide
-          "
+                animate-slide"
             >
               {CLIENTS.map((client) => (
                 <div
                   key={client.alt}
                   className=" relative
-                    w-[200px]
+                    w-[100px]
                     m-20
                     shrink-0
                     flex
-                    items-center
-                  "
+                    items-center"
                 >
                   <Image
                     src={client.logo}
                     alt={client.alt}
-                    width={200}
+                    width={150}
                     className="object-contain max-w-none"
                   />
                 </div>
@@ -147,15 +139,20 @@ const HomePage = () => {
           ))}
         </div>
       </section>
-      <section
+      {/* <div className="overflow-hidden pb-[16.4rem] md:pb-[25.6rem]">
+        <Container className="pt-[6.4rem]">
+          <HeroImage />
+        </Container>
+      </div> */}
+
+      {/* <section
         className="px-4
         sm:px-6
         flex
         justify-center
         items-center
         flex-col
-        relative
-      "
+        relative"
       >
         <div
           className="w-[30%]
@@ -165,8 +162,7 @@ const HomePage = () => {
           absolute
           bg-brand-primaryPurple/50
           -z-10
-          top-22
-        "
+          top-22"
         />
         <TitleSection
           title="Know everything, manage anything"
@@ -175,9 +171,9 @@ const HomePage = () => {
         />
         <div
           className="mt-10
-          
-          max-w-[600px]
+          max-w-[750px]
           flex
+          opacity-70
           justify-center
           items-center
           relative
@@ -185,8 +181,7 @@ const HomePage = () => {
           rounded-2xl
           border-8
           border-washed-purple-300 
-          border-opacity-10
-        "
+          border-opacity-10"
         >
           <Image src={Cal} alt="Banner" />
         </div>
@@ -195,11 +190,12 @@ const HomePage = () => {
         className="px-4
         sm:px-6
         flex
+        opacity-80
+
         justify-center
         items-center
         flex-col
-        relative
-      "
+        relative"
       >
         <div
           className="w-[30%]
@@ -209,14 +205,12 @@ const HomePage = () => {
           absolute
           bg-brand-primaryPurple/50
           -z-10
-          top-22
-        "
+          top-22"
         />
-
         <div
           className="mt-10
           
-          max-w-[600px]
+          max-w-[750px]
           flex
           justify-center
           items-center
@@ -225,12 +219,11 @@ const HomePage = () => {
           rounded-2xl
           border-8
           border-washed-purple-300 
-          border-opacity-10
-        "
+          border-opacity-10"
         >
           <Image src={Cal2} alt="Banner" />
         </div>
-      </section>
+      </section> */}
       <section className="relative">
         <div
           className="w-full
@@ -240,8 +233,7 @@ const HomePage = () => {
           absolute
           bg-brand-primaryPurple/50
           -z-100
-          top-56
-        "
+          top-56"
         />
         <div
           className="mt-20
@@ -250,8 +242,7 @@ const HomePage = () => {
           flex
           flex-col
           overflow-x-hidden
-          overflow-visible
-        "
+          overflow-visible"
         >
           <TitleSection
             title="Trusted by all"
@@ -261,7 +252,7 @@ const HomePage = () => {
           />
           {[...Array(2)].map((arr, index) => (
             <div
-              key={randomUUID()}
+              key={index}
               className={twMerge(
                 clsx('mt-10 flex flex-nowrap gap-6 self-start', {
                   'flex-row-reverse': index === 1,
@@ -275,18 +266,16 @@ const HomePage = () => {
               {USERS.map((testimonial, index) => (
                 <CustomCard
                   key={testimonial.name}
-                  className="w-[500px]
+                  className="w-[400px]
                   shrink-0s
                   rounded-xl
                   dark:bg-gradient-to-t
-                  dark:from-border dark:to-background
-                "
+                  dark:from-border dark:to-background"
                   cardHeader={
                     <div
                       className="flex
                       items-center
-                      gap-4
-                  "
+                      gap-4"
                     >
                       <Avatar>
                         <AvatarImage src={`/avatars/${index + 1}.png`} />
@@ -316,8 +305,7 @@ const HomePage = () => {
       <section
         className="mt-20
         px-4
-        sm:px-6
-      "
+        sm:px-6"
       >
         <TitleSection
           title="The Perfect Plan For You"
@@ -332,8 +320,7 @@ const HomePage = () => {
         justify-center
         sm:items-stretch
         items-center
-        mt-10
-        "
+        mt-10"
         >
           {PRICING_CARDS.map((card) => (
             <CustomCard
@@ -348,8 +335,7 @@ const HomePage = () => {
               cardHeader={
                 <CardTitle
                   className="text-2xl
-                  font-semibold
-              "
+                  font-semibold"
                 >
                   {card.planType === PRICING_PLANS.proplan && (
                     <>
@@ -358,8 +344,7 @@ const HomePage = () => {
                         absolute
                         bg-brand-primaryPurple/80
                         -z-10
-                        top-0
-                      "
+                        top-0"
                       />
                       <Image
                         src={Diamond}
@@ -375,8 +360,7 @@ const HomePage = () => {
                 <CardContent className="p-0">
                   <span
                     className="font-normal 
-                    text-2xl
-                "
+                    text-2xl"
                   >
                     ₹{card.price}
                   </span>
@@ -406,8 +390,7 @@ const HomePage = () => {
                   flex
                   mb-2
                   flex-col
-                  gap-4
-                "
+                  gap-4"
                 >
                   <small>{card.highlightFeature}</small>
                   {card.freatures.map((feature) => (
@@ -415,8 +398,7 @@ const HomePage = () => {
                       key={feature}
                       className="flex
                       items-center
-                      gap-2
-                    "
+                      gap-2"
                     >
                       <Image src={CheckIcon} alt="Check Icon" />
                       {feature}
