@@ -109,7 +109,7 @@ export const HeroImage = () => {
             inView ? 'opacity-100' : 'opacity-0'
           )}
           //   src="/images/deskai.png"
-          src="/images/deskai.webp"
+          src="/images/deskai.png"
           alt="Hero image"
         />
         {/* <Image
